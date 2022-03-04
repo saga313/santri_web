@@ -16,5 +16,5 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');

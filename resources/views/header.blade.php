@@ -23,16 +23,16 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mx-lg-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item @@about__active">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="#">About</a>
           </li>
           <!-- <li class="nav-item @@courses__active"> 
             <a class="nav-link" href="courses.html">Courses</a>
           </li>-->
           <li class="nav-item @@contact__active">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
 
@@ -55,7 +55,7 @@
         
         </div>
         <div class="top-quote mr-lg-2 text-center">
-          <a href="#login" class="btn login mr-2"><span class="fa fa-user"></span> login</a>
+          <a href="{{ route('admin') }}" class="btn login mr-2"><span class="fa fa-user"></span> login</a>
         </div>
       </div>
       <!-- toggle switch for light and dark theme -->
