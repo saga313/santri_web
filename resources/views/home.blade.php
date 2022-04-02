@@ -19,8 +19,7 @@
                                 <div class="banner-info-bg">
                                     <h6>أُطْلُبِ الْعِلْمَ مِنَ الْمَهْدِ إِلَى اللَّحْدِ</h6>
                                     <p class="mt-4 pr-lg-4">Artinya: “Tuntutlah ilmu dari buaian (bayi) hingga liang lahat.”</p>
-                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{{ route('santri-registration') }}"> Ready to
-                                        get started?</a>
+                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{{ route('santri-registration') }}"> Ayo Mondok !</a>
                                 </div>
                             </div>
                         </div>
@@ -35,8 +34,7 @@
                                 <div class="banner-info-bg">
                                     <h6>وَمَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ </h6>
                                     <p class="mt-4 pr-lg-4">Artinya: “Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.” (HR. Muslim, no. 2699) </p>
-                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{{ route('santri-registration') }}"> Ready to
-                                        get started?</a>
+                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{{ route('santri-registration') }}"> Ayo Mondok !</a>
                                 </div>
                             </div>
                         </div>
@@ -51,8 +49,7 @@
                                 <div class="banner-info-bg">
                                     <h6>طَلَبُ اْلعِلْمْ فَرِثْضَةٌ عَلَى كُلِّ مُسْلِمٍ</h6>
                                     <p class="mt-4 pr-lg-4">Artinya: "Menuntut ilmu adalah kewajiban bagi setiap individu muslim."</p>
-                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{{ route('santri-registration') }}"> Ready to
-                                        get started?</a>
+                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{{ route('santri-registration') }}"> Ayo Mondok !</a>
                                 </div>
                             </div>
                         </div>
@@ -67,8 +64,7 @@
                                 <div class="banner-info-bg">
                                     <h6>مَنْ أَرَادَ الدُّنْيَا فَعَلَيْهِ بِالْعِلْمِ, وَمَنْ أَرَادَ الأَخِرَةَ فَعَلَيْهِ بِالْعِلْمِ, وَمَنْ أَرَادَهُمَا فَعَلَيْهِ بِالْعِلْمِ</h6>
                                     <p class="mt-4 pr-lg-4">“Barang siapa menginginkan kebahagian dunia, maka tuntutlah ilmu dan barang siapa yang ingin kebahagian akhirat, tuntulah ilmu dan barangsiapa yang menginginkan keduanya, tuntutlah ilmu pengetahuan.</p>
-                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{{ route('santri-registration') }}"> Ready to
-                                        get started?</a>
+                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{{ route('santri-registration') }}"> Ayo Mondok !</a>
                                 </div>
                             </div>
                         </div>
@@ -88,14 +84,14 @@
 <section class="w3l-courses">
     <div class="blog pb-5" id="courses">
         <div class="container py-lg-5 py-md-4 py-2">
-            <h5 class="title-small text-center mb-1">Join our learn Courses</h5>
-            <h3 class="title-big text-center mb-sm-5 mb-4">Featured Online <span>Courses</span></h3>
+            <h5 class="title-small text-center mb-1">Join and learn with us</h5>
+            <h3 class="title-big text-center mb-sm-5 mb-4">Gallery</h3>
             <div class="row">
                 <div class="col-lg-4 col-md-6 item">
                     <div class="card">
                         <div class="card-header p-0 position-relative">
                             <a href="#course-single" class="zoom d-block">
-                                <img class="card-img-bottom d-block" src="{{ asset ('img/c1') }}.jpg"
+                                <img class="card-img-bottom d-block" src="{{ asset ('img/b2.jpeg') }}"
                                     alt="Card image cap">
                             </a>
                             <div class="post-pos">
@@ -146,7 +142,7 @@
                     <div class="card">
                         <div class="card-header p-0 position-relative">
                             <a href="#course-single" class="zoom d-block">
-                                <img class="card-img-bottom d-block" src="{{ asset ('img/c5.jpg') }}"
+                                <img class="card-img-bottom d-block" src="{{ asset ('img/b3.jpeg') }}"
                                     alt="Card image cap">
                             </a>
                             <div class="course-price-badge"> Free</div>
@@ -180,7 +176,7 @@
                         </div>
                         <div class="card-footer">
                             <div class="author align-items-center">
-                                <img src="{{ asset ('img/a2.jpg') }}" alt="" class="img-fluid rounded-circle">
+                                <img src="{{ asset ('img/b3.jpeg') }}" alt="" class="img-fluid rounded-circle">
                                 <ul class="blog-meta">
                                     <li>
                                         <span class="meta-value mx-1">by</span> <a href="#author"> Isabella</a>
@@ -198,7 +194,7 @@
                     <div class="card">
                         <div class="card-header p-0 position-relative">
                             <a href="#course-single" class="zoom d-block">
-                                <img class="card-img-bottom d-block" src="{{ asset ('img/c6.jpg') }}"
+                                <img class="card-img-bottom d-block" src="{{ asset ('img/b1.jpeg') }}"
                                     alt="Card image cap">
                             </a>
                             <div class="course-price-badge-new"> New</div>
@@ -242,56 +238,6 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-5 text-more">
-                <p class="pt-md-3 sample text-center">
-                    Control your personal preference settings to get notified about appropriate courses
-                    <a href="courses.html">View All Courses <span class="pl-2 fa fa-long-arrow-right"></span></a>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="w3l-features py-5" id="facilities">
-    <div class="call-w3 py-lg-5 py-md-4 py-2">
-        <div class="container">
-            <div class="row main-cont-wthree-2">
-                <div class="col-lg-5 feature-grid-left">
-                    <h5 class="title-small mb-1">Study and graduate</h5>
-                    <h3 class="title-big mb-4">Our Facilities </h3>
-                    <p class="text-para">Curabitur id gravida risus. Fusce eget ex fermentum, ultricies nisi ac sed,
-                        lacinia est.
-                        Quisque ut lectus consequat, venenatis eros et, commodo risus. Nullam sit amet laoreet elit.
-                        Suspendisse non magna a velit efficitur. </p>
-                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas ab qui impedit, libero illo
-                        quia sequi quibusdam iure. Error minus quod reprehenderit quae dolor velit soluta animi
-                        voluptate dicta enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, provident!</p>
-                    <a href="#url" class="btn btn-primary btn-style mt-md-5 mt-4">Discover More</a>
-                </div>
-                <div class="col-lg-7 feature-grid-right mt-lg-0 mt-5">
-                    <div class="call-grids-w3 d-grid">
-                        <div class="grids-1 box-wrap">
-                            <a href="#more" class="icon"><span class="fa fa-certificate"></span></a>
-                            <h4><a href="#feature" class="title-head">Global Certificate</a></h4>
-                            <p>Vivamus a ligula quam. Ut blandit eu leo non. Duis sed doloramet laoreet.</p>
-                        </div>
-                        <div class="grids-1 box-wrap">
-                            <a href="#more" class="icon"><span class="fa fa-book"></span></a>
-                            <h4><a href="#feature" class="title-head">Books & Library</a></h4>
-                            <p>Vivamus a ligula quam. Ut blandit eu leo non. Duis sed dolor amet laoreet.</p>
-                        </div>
-                        <div class="grids-1 box-wrap">
-                            <a href="#more" class="icon"><span class="fa fa-trophy"></span></a>
-                            <h4><a href="#feature" class="title-head">Scholarship</a></h4>
-                            <p>Vivamus a ligula quam. Ut blandit eu leo non. Duis sed dolor amet laoreet.</p>
-                        </div>
-                        <div class="grids-1 box-wrap">
-                            <a href="#more" class="icon"><span class="fa fa-graduation-cap"></span></a>
-                            <h4><a href="#feature" class="title-head">Alumni Support</a></h4>
-                            <p>Vivamus a ligula quam. Ut blandit eu leo non. Duis sed dolor amet laoreet.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -303,13 +249,13 @@
             <div class="col-md-6">
                 <div class="top-pic1">
                     <div class="card-body blog-details">
-                        <a href="#blog-single" class="blog-desc">Enhance your educational skills and also experience with best online courses
+                        <a href="#blog-single" class="blog-desc">Pondok Pesantren AL Husen 
                         </a>
                         <div class="author align-items-center">
-                            <img src="{{ asset ('img/team1.jpg') }}" alt="" class="img-fluid rounded-circle" />
+                            <img src="{{ asset ('img/a.png') }}" alt="" class="img-fluid rounded-circle" />
                             <ul class="blog-meta">
                                 <li>
-                                    <a href="#author">Isabella ava</a> </a>
+                                    <a href="#author">Logo Ponpes</a> </a>
                                 </li>
                                 <li class="meta-item blog-lesson">
                                     <span class="meta-value"> Nov 19, 2020 </span>. <span class="meta-value ml-2"><span
@@ -373,8 +319,8 @@
         <div class="welcome-left text-center py-lg-4">
             <h5 class="title-small mb-1">Start learning religion</h5>
             <h3 class="title-big">Ayok Mondok !!</h3>
-            <a href="{{ route('santri-registration') }}" class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2">Get started now</a>
-            <a href="contact.html" class="btn btn-style btn-primary mt-sm-5 mt-4">Contact Us</a>
+            <a href="{{ route('santri-registration') }}" class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2">Daftar Sekarang</a>
+            <a href="contact.html" class="btn btn-style btn-primary mt-sm-5 mt-4">Hubungi Kami</a>
         </div>
     </div>
 </div>
@@ -395,7 +341,7 @@
                         quia sequi quibusdam iure. Error minus quod reprehenderit quae dolor velit soluta animi
                         voluptate dicta enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, provident!
                     </p>
-                    <a href="#url" class="btn btn-primary btn-style mt-md-5 mt-4">Discover More</a>
+                    <a href="{{ route('santri-registration') }}" class="btn btn-primary btn-style mt-md-5 mt-4">Daftar Sekarang</a>
                 </div>
                 <div class="col-lg-7 feature-grid-right mt-lg-0 mt-5">
                     <div class="row">
@@ -406,15 +352,7 @@
                                     <h3 class="title"><a href="#url">KH. Ja'far Sidiq</a></h3>
                                     <span class="post">Pimpinan Ponpes Al-Husen</span>
                                      <ul class="social">
-                                        <li> 
-                                            <!-- <a href="#" class="facebook"> 
-                                                <span class="fa fa-facebook-f"></span>
-                                            </a>
-                                        </li>
                                         <li>
-                                            <a href="#" class="twitter">
-                                                <span class="fa fa-twitter"></span>
-                                            </a>-->
                                         </li>
                                     </ul>
                                 </div>
@@ -495,7 +433,7 @@
         <div class="container py-lg-4 py-md-3 pb-lg-0">
 
             <h5 class="title-small text-center mb-1">Testimonials</h5>
-            <h3 class="title-big text-center mb-sm-5 mb-4">Happy Clients & Feedbacks</h3>
+            <h3 class="title-big text-center mb-sm-5 mb-4">Happy Alumni & Feedbacks</h3>
             <!-- /grids -->
             <div class="testimonial-width">
                 <div id="owl-demo1" class="owl-two owl-carousel owl-theme">
@@ -503,18 +441,92 @@
                         <div class="testimonial-content">
                             <div class="testimonial">
                                 <blockquote>
-                                    <q>Lorem ipsum dolor sit amet elit. Velit beatae
-                                        laudantium
-                                        voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
-                                        Dolores molestias adipisci dolo amet!.</q>
+                                    <q>Kesan saya mengenai PP alhusen , saya ucapkan terimakasih kepada akang haji yang telah membina dan membimbing saya dalam Hal syariah islamiyah . Di alhusen juga saya jadi mengenal para habaib dan lingkungan yang cinta sholawat dan akhirnya saya bisa bermain Hadroh terima kasih untuk Fariz Dkk . Dan seluruh Kerabat akang haji yang selalu mensupport kegiatan santriwan santriwati.</q>
                                 </blockquote>
                                 <div class="testi-des">
-                                    <div class="test-img"><img src="{{ asset ('img/team1.jpg') }}" class="img-fluid"
+                                    <div class="test-img"><img src="{{ asset ('img/avatar3.png') }}" class="img-fluid"
                                             alt="client-img">
                                     </div>
                                     <div class="peopl align-self">
-                                        <h3>John wilson</h3>
-                                        <p class="indentity">Student</p>
+                                        <h3>Alip Gamiarta Pratama</h3>
+                                        <p class="indentity">Alumni Santri</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial-content">
+                            <div class="testimonial">
+                                <blockquote>
+                                    <q>Kesan saya mesantren di alhusen sangat merasa bhgia krna akang telah memupuk jiwa rohani saya menjdi lebih baik, entah apa yg trjadi jika saat itu saya tidak mesantren. Ditambah keadaan akhir zaman yg sungguh2 banyak fitnah.
+
+Pesan : bagi seluruh alumni tetep jaga silaturahmi. Untuk para santri mukimin smngatlah mnuntut ilmu sebelum datang nya 5 perkara.</q>
+                                </blockquote>
+                                <div class="testi-des">
+                                    <div class="test-img"><img src="{{ asset ('img/avatar2.png') }}" class="img-fluid"
+                                            alt="client-img">
+                                    </div>
+                                    <div class="peopl align-self">
+                                        <h3>Uud Mahmud</h3>
+                                        <p class="indentity">Alumni Santri</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial-content">
+                            <div class="testimonial">
+                                <blockquote>
+                                    <q>Saya sangat senang bisa menuntut ilmu agama Di Pondok Pesantren AL Husen, saya mendapatkan banyak sekali ilmu dan pengalaman dari Dewan Pengajar maupun teman-teman Santri.
+Lingkungan di Pesantren ini sangatlah nyaman. Selain itu, fasilitasnya pun juga Lumayan lengkap sehingga sangat mendukung dan memudahkan para Santri dalam kegiatan belajar.
+</q>
+                                </blockquote>
+                                <div class="testi-des">
+                                    <div class="test-img"><img src="{{ asset ('img/avatar5.png') }}" class="img-fluid"
+                                            alt="client-img">
+                                    </div>
+                                    <div class="peopl align-self">
+                                        <h3>Muhammad Arif</h3>
+                                        <p class="indentity">Alumni Santri</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial-content">
+                            <div class="testimonial">
+                                <blockquote>
+                                    <q>Saya sangat senang bisa berteman dengan kalian. Kita sudah bersama-sama selama beberapa tahun. Banyak hal yang sudah kita lewati bersama, baik senang maupun sedih. Kalian adalah teman-teman yang baik. Selalu mau menemani saya dalam keadaan apapun, serta selalu memberi nasihat yang baik ketika saya salah.
+Tak ada lagi kata yang bisa saya ucap, kalian adalah yang terbaik!</q>
+                                </blockquote>
+                                <div class="testi-des">
+                                    <div class="test-img"><img src="{{ asset ('img/avatar5.png') }}" class="img-fluid"
+                                            alt="client-img">
+                                    </div>
+                                    <div class="peopl align-self">
+                                        <h3>Gerbin</h3>
+                                        <p class="indentity">Alumni Santri</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial-content">
+                            <div class="testimonial">
+                                <blockquote>
+                                    <q>Kesan saya mengenai PP alhusen , saya ucapkan terimakasih kepada akang haji yang telah membina dan membimbing saya dalam Hal syariah islamiyah . Di alhusen juga saya jadi mengenal para habaib dan lingkungan yang cinta sholawat dan akhirnya saya bisa bermain Hadroh terima kasih untuk Fariz Dkk . Dan seluruh Kerabat akang haji yang selalu mensupport kegiatan santriwan santriwati.</q>
+                                </blockquote>
+                                <div class="testi-des">
+                                    <div class="test-img"><img src="{{ asset ('img/avatar4.png') }}" class="img-fluid"
+                                            alt="client-img">
+                                    </div>
+                                    <div class="peopl align-self">
+                                        <h3>Wahid</h3>
+                                        <p class="indentity">Alumni Santri</p>
                                     </div>
                                 </div>
                             </div>
@@ -530,12 +542,12 @@
                                         Dolores molestias adipisci dolo amet!.</q>
                                 </blockquote>
                                 <div class="testi-des">
-                                    <div class="test-img"><img src="{{ asset ('img/team2.jpg') }}" class="img-fluid"
+                                    <div class="test-img"><img src="{{ asset ('img/avatar3.png') }}" class="img-fluid"
                                             alt="client-img">
                                     </div>
                                     <div class="peopl align-self">
-                                        <h3>Julia sakura</h3>
-                                        <p class="indentity">Student</p>
+                                        <h3>Huda Fiqri</h3>
+                                        <p class="indentity">Alumni Santri</p>
                                     </div>
                                 </div>
                             </div>
@@ -545,18 +557,15 @@
                         <div class="testimonial-content">
                             <div class="testimonial">
                                 <blockquote>
-                                    <q>Lorem ipsum dolor sit amet elit. Velit beatae
-                                        laudantium
-                                        voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
-                                        Dolores molestias adipisci dolo amet!.</q>
+                                    <q>Kesan saya mengenai PP alhusen , saya ucapkan terimakasih kepada akang haji yang telah membina dan membimbing saya dalam Hal syariah islamiyah . Di alhusen juga saya jadi mengenal para habaib dan lingkungan yang cinta sholawat dan akhirnya saya bisa bermain Hadroh terima kasih untuk Fariz Dkk . Dan seluruh Kerabat akang haji yang selalu mensupport kegiatan santriwan santriwati.</q>
                                 </blockquote>
                                 <div class="testi-des">
-                                    <div class="test-img"><img src="{{ asset ('img/team3.jpg') }}" class="img-fluid"
+                                    <div class="test-img"><img src="{{ asset ('img/avatar2.png') }}" class="img-fluid"
                                             alt="client-img">
                                     </div>
                                     <div class="peopl align-self">
-                                        <h3>Roy Linderson</h3>
-                                        <p class="indentity">Student</p>
+                                        <h3>Sulaiman Malik</h3>
+                                        <p class="indentity">Alumni Santri</p>
                                     </div>
                                 </div>
                             </div>
@@ -566,102 +575,16 @@
                         <div class="testimonial-content">
                             <div class="testimonial">
                                 <blockquote>
-                                    <q>Lorem ipsum dolor sit amet elit. Velit beatae
-                                        laudantium
-                                        voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
-                                        Dolores molestias adipisci dolo amet!.</q>
+                                    <q>Saya sangat senang bisa berteman dengan kalian. Kita sudah bersama-sama selama beberapa tahun. Banyak hal yang sudah kita lewati bersama, baik senang maupun sedih. Kalian adalah teman-teman yang baik. Selalu mau menemani saya dalam keadaan apapun, serta selalu memberi nasihat yang baik ketika saya salah.
+Tak ada lagi kata yang bisa saya ucap, kalian adalah yang terbaik!.</q>
                                 </blockquote>
                                 <div class="testi-des">
-                                    <div class="test-img"><img src="{{ asset ('img/team4.jpg') }}" class="img-fluid"
+                                    <div class="test-img"><img src="{{ asset ('img/avatar.png') }}" class="img-fluid"
                                             alt="client-img">
                                     </div>
                                     <div class="peopl align-self">
-                                        <h3>Mike Thyson</h3>
-                                        <p class="indentity">Student</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial-content">
-                            <div class="testimonial">
-                                <blockquote>
-                                    <q>Lorem ipsum dolor sit amet elit. Velit beatae
-                                        laudantium
-                                        voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
-                                        Dolores molestias adipisci dolo amet!.</q>
-                                </blockquote>
-                                <div class="testi-des">
-                                    <div class="test-img"><img src="{{ asset ('img/team2.jpg') }}" class="img-fluid"
-                                            alt="client-img">
-                                    </div>
-                                    <div class="peopl align-self">
-                                        <h3>Laura gill</h3>
-                                        <p class="indentity">Student</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial-content">
-                            <div class="testimonial">
-                                <blockquote>
-                                    <q>Lorem ipsum dolor sit amet elit. Velit beatae
-                                        laudantium
-                                        voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
-                                        Dolores molestias adipisci dolo amet!.</q>
-                                </blockquote>
-                                <div class="testi-des">
-                                    <div class="test-img"><img src="{{ asset ('img/team3.jpg') }}" class="img-fluid"
-                                            alt="client-img">
-                                    </div>
-                                    <div class="peopl align-self">
-                                        <h3>Smith Johnson</h3>
-                                        <p class="indentity">Student</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial-content">
-                            <div class="testimonial">
-                                <blockquote>
-                                    <q>Lorem ipsum dolor sit amet elit. Velit beatae
-                                        laudantium
-                                        voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
-                                        Dolores molestias adipisci dolo amet!.</q>
-                                </blockquote>
-                                <div class="testi-des">
-                                    <div class="test-img"><img src="{{ asset ('img/team2.jpg') }}" class="img-fluid"
-                                            alt="client-img">
-                                    </div>
-                                    <div class="peopl align-self">
-                                        <h3>Laura gill</h3>
-                                        <p class="indentity">Student</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial-content">
-                            <div class="testimonial">
-                                <blockquote>
-                                    <q>Lorem ipsum dolor sit amet elit. Velit beatae
-                                        laudantium
-                                        voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
-                                        Dolores molestias adipisci dolo amet!.</q>
-                                </blockquote>
-                                <div class="testi-des">
-                                    <div class="test-img"><img src="{{ asset ('img/team3.jpg') }}" class="img-fluid"
-                                            alt="client-img">
-                                    </div>
-                                    <div class="peopl align-self">
-                                        <h3>Smith Johnson</h3>
-                                        <p class="indentity">Student</p>
+                                        <h3>Dede Maulana</h3>
+                                        <p class="indentity">Alumni Santri</p>
                                     </div>
                                 </div>
                             </div>
