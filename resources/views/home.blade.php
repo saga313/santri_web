@@ -19,7 +19,7 @@
                                 <div class="banner-info-bg">
                                     <h6>أُطْلُبِ الْعِلْمَ مِنَ الْمَهْدِ إِلَى اللَّحْدِ</h6>
                                     <p class="mt-4 pr-lg-4">Artinya: “Tuntutlah ilmu dari buaian (bayi) hingga liang lahat.”</p>
-                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="about.html"> Ready to
+                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{{ route('santri-registration') }}"> Ready to
                                         get started?</a>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@
                                 <div class="banner-info-bg">
                                     <h6>وَمَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ </h6>
                                     <p class="mt-4 pr-lg-4">Artinya: “Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga.” (HR. Muslim, no. 2699) </p>
-                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="about.html"> Ready to
+                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{{ route('santri-registration') }}"> Ready to
                                         get started?</a>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
                                 <div class="banner-info-bg">
                                     <h6>طَلَبُ اْلعِلْمْ فَرِثْضَةٌ عَلَى كُلِّ مُسْلِمٍ</h6>
                                     <p class="mt-4 pr-lg-4">Artinya: "Menuntut ilmu adalah kewajiban bagi setiap individu muslim."</p>
-                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="about.html"> Ready to
+                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{{ route('santri-registration') }}"> Ready to
                                         get started?</a>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@
                                 <div class="banner-info-bg">
                                     <h6>مَنْ أَرَادَ الدُّنْيَا فَعَلَيْهِ بِالْعِلْمِ, وَمَنْ أَرَادَ الأَخِرَةَ فَعَلَيْهِ بِالْعِلْمِ, وَمَنْ أَرَادَهُمَا فَعَلَيْهِ بِالْعِلْمِ</h6>
                                     <p class="mt-4 pr-lg-4">“Barang siapa menginginkan kebahagian dunia, maka tuntutlah ilmu dan barang siapa yang ingin kebahagian akhirat, tuntulah ilmu dan barangsiapa yang menginginkan keduanya, tuntutlah ilmu pengetahuan.</p>
-                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="about.html"> Ready to
+                                    <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="{{ route('santri-registration') }}"> Ready to
                                         get started?</a>
                                 </div>
                             </div>
@@ -373,7 +373,7 @@
         <div class="welcome-left text-center py-lg-4">
             <h5 class="title-small mb-1">Start learning religion</h5>
             <h3 class="title-big">Ayok Mondok !!</h3>
-            <a href="index.html" class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2">Get started now</a>
+            <a href="{{ route('santri-registration') }}" class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2">Get started now</a>
             <a href="contact.html" class="btn btn-style btn-primary mt-sm-5 mt-4">Contact Us</a>
         </div>
     </div>

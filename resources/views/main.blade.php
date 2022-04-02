@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>PONPES AL - Husen</title>
+    <title>ponpesalhusen</title>
 
     <!-- google fonts -->
     <link href="//fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
@@ -13,6 +13,9 @@
     
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset ('css/style-starter.css') }}">
+	<link rel="stylesheet" href="{{ asset ('plugins/sweetalert2/sweetalert2.css') }}">
+	<!-- Jquery first load -->
+	<script src="{{ asset ('js/jquery-3.3.1.min.js') }}"></script>
     
   </head>
 <body>
@@ -27,8 +30,6 @@
 	@include('footer')
 
 	<!-- Template JavaScript -->
-	<script src="{{ asset ('js/jquery-3.3.1.min.js') }}"></script>
-
 	<script src="{{ asset ('js/theme-change.js') }}"></script>
 
 	<!-- stats number counter-->
@@ -139,7 +140,7 @@
 	  });
 	</script>
 	<!--//MENU-JS-->
-
-	<script src="{{ asset ('js/bootstrap.min.js') }}"></script>	
+	<script src="{{ asset ('js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset ('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 </body>
 </html>
