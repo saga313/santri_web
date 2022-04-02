@@ -10,4 +10,9 @@ class AdminController extends Controller
 
         return view ('admin/admin');
     }
+
+    public function santri(){
+
+        return view ('admin/santri');
+    }
 }

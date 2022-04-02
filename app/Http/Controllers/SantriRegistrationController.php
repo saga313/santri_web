@@ -23,7 +23,7 @@ class SantriRegistrationController extends Controller
         );
         try {
             $santri = new Santri;
-    
+            $santri->id = random_int(100000, 999999);
             $santri->nama = $request->nama;
             $santri->jk = $request->jk;
             $santri->tempat = $request->tempat;

@@ -47,9 +47,9 @@
   <!-- copyright -->
   <section class="w3l-copyright text-center">
     <div class="container">
-      <p class="copy-footer-29">© 2020 Study Course. All rights reserved. Design by <a href="https://w3layouts.com/"
+      <p class="copy-footer-29"> <a href="https://w3layouts.com/"
           target="_blank">
-          W3Layouts</a></p>
+          </a></p>
     </div>
 
     <!-- move top -->
