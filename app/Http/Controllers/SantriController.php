@@ -43,7 +43,7 @@ class SantriController extends Controller
   function count_all()
   {
       $countAll = Santri::count();
-      return $countAll ;        
+      return $countAll;        
   }
 
   function count_filtered()

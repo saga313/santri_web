@@ -20,6 +20,6 @@ use App\Http\Controllers\SantriRegistrationController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/admin/santri', [AdminController::class, 'santri'])->name('admin-santri');
-Route::post('/santri/ajax_list', [SantriController::class, 'ajax_list'])->name('santri-ajax_list');
+Route::post('/santri/ajax_list', [SantriController::class, 'ajax_list'])->name('santri-ajax-list');
 Route::get('/santri-registration', [SantriRegistrationController::class, 'index'])->name('santri-registration');
 Route::post('/santri-registration/store', [SantriRegistrationController::class, 'store'])->name('santri-registration-store');
