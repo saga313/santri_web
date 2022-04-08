@@ -25,7 +25,7 @@
       <a href="/" class="h1"><b>Al</b>Hussen</a>
     </div>
     <div class="card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
+      <p class="login-box-msg">Silahakan login</p>
 
       <form id='form'>
         <div class="input-group mb-3">
@@ -66,7 +66,6 @@
   <!-- /.card -->
 </div>
 <!-- /.login-box -->
-
 
 <!-- Bootstrap 4 -->
 <script src="{{ asset ('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
