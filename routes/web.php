@@ -19,6 +19,9 @@ use App\Http\Controllers\SantriRegistrationController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::get('/admin/login', [AdminController::class, 'login'])->name('admin-login');
+Route::post('/admin/register', [AdminController::class, 'store'])->name('admin-register');
+Route::post('/admin/login/auth', [AdminController::class, 'auth'])->name('admin-auth');
 Route::get('/admin/santri', [AdminController::class, 'santri'])->name('admin-santri');
 Route::post('/santri/ajax_list', [SantriController::class, 'ajax_list'])->name('santri-ajax-list');
 Route::get('/santri-registration', [SantriRegistrationController::class, 'index'])->name('santri-registration');

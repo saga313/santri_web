@@ -13,7 +13,7 @@
     
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset ('css/style-starter.css') }}">
-	<link rel="stylesheet" href="{{ asset ('plugins/sweetalert2/sweetalert2.css') }}">
+		<link rel="stylesheet" href="{{ asset ('plugins/sweetalert2/sweetalert2.css') }}">
 	<!-- Jquery first load -->
 	<script src="{{ asset ('js/jquery-3.3.1.min.js') }}"></script>
     

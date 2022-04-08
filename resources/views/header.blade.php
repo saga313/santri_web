@@ -55,7 +55,7 @@
         
         </div>
         <div class="top-quote mr-lg-2 text-center">
-          <a href="{{ route('admin') }}" class="btn login mr-2"><span class="fa fa-user"></span> login</a>
+          <a href="{{ route('admin-login') }}" class="btn login mr-2"><span class="fa fa-user"></span> login</a>
         </div>
       </div>
       <!-- toggle switch for light and dark theme -->
