@@ -22,10 +22,10 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="/" class="h1"><b>Al</b>Hussen</a>
+      <a href="/" class="h1"><b>Al-</b>Husen</a>
     </div>
     <div class="card-body">
-      <p class="login-box-msg">Silahakan login</p>
+      <p class="login-box-msg">Silahkan login</p>
 
       <form id='form'>
         <div class="input-group mb-3">
@@ -112,7 +112,7 @@
                 Swal.fire({
                 icon: response.status_desc,
                 title: "Sukses",
-                text: 'Pendaftaran berhasil',
+                text: 'Login berhasil',
               }).then (function() {
                   window.location.href = "{{ route('admin') }}";
                 });

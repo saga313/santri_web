@@ -54,7 +54,7 @@
                         </div>
                         <div class="cont-right">
                             <h6>Email</h6>
-                            <p><a href="mailto:coursing@mail.com" class="mail">ponpesalhusen@mail.com</a></p>
+                            <p><a href="mailto:coursing@mail.com" class="mail">ponpesalhusen@gmail.com</a></p>
                         </div>
                     </div>
                 </div>

@@ -20,6 +20,11 @@ class AdminController extends Controller
         return view ('admin/santri');
     }
 
+    public function adminsantri(){
+
+      return view ('admin/adminsantri');
+    }
+
     public function login(){
 
         return view ('admin/login');
@@ -66,4 +71,44 @@ class AdminController extends Controller
 
         return response()->json($response);               
     }
+  function ajax_list()
+  {
+    $list = User::all();
+    $data = array();
+    $no = $_POST['start'];
+    // $no = 1;
+    foreach ($list as $item) {
+        $no++;
+        $row = array();
+        $row[] = $item->id;
+        $row[] = $item->name;
+        $row[] = $item->email;
+        /*
+        $row[] = '<a class="btn btn-sm btn-primary" href="javascript:void(0)" title="Edit" onclick="edit_purchase('."'".$item->id."'".')"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
+              <a class="btn btn-sm btn-danger" href="javascript:void(0)" title="Hapus" onclick="delete_purchase('."'".$item->id."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a>';*/
+        $data[] = $row;
+    }
+
+    $output = array(
+                    "draw" => intval($_POST['draw']),
+                    "recordsTotal" => intval($this->count_all()),
+                    "recordsFiltered" => intval($this->count_filtered()),
+                    "data" => $data,
+            );
+    //output to json format
+    // echo json_encode($output);
+    return response()->json($output);
+  }
+
+  function count_all()
+  {
+      $countAll = User::count();
+      return $countAll;        
+  }
+
+  function count_filtered()
+  {
+      $countFiltered = User::all()->count();
+      return $countFiltered;      
+  }
 }
