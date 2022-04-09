@@ -26,13 +26,13 @@
             <a class="nav-link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item @@about__active">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#team">About</a>
           </li>
           <!-- <li class="nav-item @@courses__active"> 
             <a class="nav-link" href="courses.html">Courses</a>
           </li>-->
           <li class="nav-item @@contact__active">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
 

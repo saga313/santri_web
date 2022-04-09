@@ -1,4 +1,4 @@
-<section class="w3l-footer-29-main">
+<section class="w3l-footer-29-main" id="contact">
   <div class="footer-29 py-5">
     <div class="container py-md-4">
       <div class="row footer-top-29">
