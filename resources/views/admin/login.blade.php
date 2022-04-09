@@ -109,11 +109,19 @@
           },  
           success:function(response) {
             if (response.status === 200){
+                const data = []
+                const user = {
+                  id : response.data.id,
+                  nama : response.data.name,
+                  email : response.data.email,
+                }
+                data.push(user);
+                sessionStorage.setItem('user', JSON.stringify(data));
                 Swal.fire({
                 icon: response.status_desc,
                 title: "Sukses",
                 text: 'Login berhasil',
-              }).then (function() {
+                }).then (function() {
                   window.location.href = "{{ route('admin') }}";
                 });
             }else{

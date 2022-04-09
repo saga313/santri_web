@@ -13,7 +13,7 @@
           <img src="{{ asset ('img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a id="name" href="#" class="d-block"></a>
         </div>
       </div>
 
@@ -56,15 +56,6 @@
                 </a>
               </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Pemberitahuan
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
           </li>
         </ul>
       </nav>

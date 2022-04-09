@@ -40,46 +40,45 @@
     <script src="{{ asset ('plugins/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset ('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
     <script>
-        $(function () {
-          //datatables
-          const table = $('#table').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,        
-            "processing": true, //Feature control the processing indicator.
-            "serverSide": true, //Feature control DataTables' server-side processing mode.
-            "order": [], //Initial no order.
-            "iDisplayLength": 50, //display length
-             // "bFilter": false,
-            // Load data for the table's content from an Ajax source
-            "ajax": {
-              "url": "{{ route('santri-ajax-list')}}",
-              "type": "POST",
-              "dataType": "json",
-              "data":{ _token: "{{csrf_token()}}"}
-            },
+      $(function () {
+        //datatables
+        const table = $('#table').DataTable({
+          "paging": true,
+          "lengthChange": false,
+          "searching": false,
+          "ordering": true,
+          "info": true,
+          "autoWidth": false,
+          "responsive": true,        
+          "processing": true, //Feature control the processing indicator.
+          "serverSide": true, //Feature control DataTables' server-side processing mode.
+          "order": [], //Initial no order.
+          "iDisplayLength": 50, //display length
+           // "bFilter": false,
+          // Load data for the table's content from an Ajax source
+          "ajax": {
+            "url": "{{ route('santri-ajax-list')}}",
+            "type": "POST",
+            "dataType": "json",
+            "data":{ _token: "{{csrf_token()}}"}
+          },
 
-            //Set column definition initialisation properties.
-            "columnDefs": [
-            { 
-            //    "targets": [ -1 ], //last column
-            //    "orderable": false, //set not orderable
-            },
-            ],
-            "fnDrawCallback": function(nRow, aData, iDisplayIndex){
-              $('#table tbody tr').hover(function() {
-                $(this).addClass('highlight');
-              }, function() {
-                $(this).removeClass('highlight');
-              });
-            }
+          //Set column definition initialisation properties.
+          "columnDefs": [
+          { 
+          //    "targets": [ -1 ], //last column
+          //    "orderable": false, //set not orderable
+          },
+          ],
+          "fnDrawCallback": function(nRow, aData, iDisplayIndex){
+            $('#table tbody tr').hover(function() {
+              $(this).addClass('highlight');
+            }, function() {
+              $(this).removeClass('highlight');
+            });
+          }
 
-          });
         });
-
+      });
     </script>
 @endsection

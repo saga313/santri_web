@@ -43,30 +43,34 @@ class AdminController extends Controller
           'status_desc'=> 'error',
           'message' => '',
           'is_valid' => false,
+          'data' =>'',
 
       );
 
       try {
         $email      = $request->input('email');
         $password   = $request->input('password');
-        /*
+
         $user = User::where('email','=',$email)->first();
-        */
+
         if(Auth::guard('web')->attempt(['email' => $email, 'password' => $password])) {
             $response['status'] = 200;
             $response['status_desc'] = 'success';
             $response['is_valid'] = true;
+            $response['data'] = $user;
             unset($response['message']);
         }else{
           $response['status'] = 401;
           $response['status_desc'] = 'Bad request';
           $response['is_valid'] = false;
-          unset($response['message']);            
+          unset($response['data']);
+          unset($response['message']);          
         }    
 
       } catch (\Exception $e) {
         $response['status'] = 500;
         $response['message'] = $e->getMessage();
+        unset($response['data']);
       }
 
         return response()->json($response);               
