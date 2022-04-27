@@ -15,6 +15,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset ('css/adminlte.min.css') }}">
+  <link rel="stylesheet" href="{{ asset ('plugins/sweetalert2/sweetalert2.css') }}">
   <!-- jQuery -->
   <script src="{{ asset ('plugins/jquery/jquery.min.js') }}"></script>
 </head>
@@ -55,14 +56,39 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
-
+<script src="{{ asset ('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{ asset ('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset ('js/adminlte.min.js') }}"></script>
 <script>
-  const user = JSON.parse(sessionStorage.getItem("user"))[0];
-  $('#name').text(user.nama);
+  function logout(){
+    $.ajax({
+      type:'GET',
+      url:"{{ route('admin-logout') }}",
+      statusCode: {
+        500: function (response) {
+          Swal.fire({
+            icon: 'error',
+            title: "Gagal",
+            text: 'Silahkan coba lagi',
+          })
+        }
+      },  
+      success:function(response) {
+        if (response.status === 200){
+          console.log(response);
+          Swal.fire({
+          icon: response.status_desc,
+          title: "Sukses",
+          text: 'Logout berhasil',
+          }).then (function() {
+            window.location.href = "{{ route('admin-login') }}";
+          });
+        }  
+      }
+    });
+  }
 </script>
 </body>
 </html>

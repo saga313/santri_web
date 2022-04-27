@@ -44,6 +44,7 @@
             </div>
           </div>
         </div>
+        <!--
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
@@ -52,7 +53,7 @@
                 Remember Me
               </label>
             </div>
-          </div>
+          </div>-->
           <!-- /.col -->
           <div class="col-4">
             <button type="button" onclick="login()" class="btn btn-primary btn-block">Sign In</button>
@@ -109,14 +110,6 @@
           },  
           success:function(response) {
             if (response.status === 200){
-                const data = []
-                const user = {
-                  id : response.data.id,
-                  nama : response.data.name,
-                  email : response.data.email,
-                }
-                data.push(user);
-                sessionStorage.setItem('user', JSON.stringify(data));
                 Swal.fire({
                 icon: response.status_desc,
                 title: "Sukses",

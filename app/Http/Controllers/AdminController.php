@@ -10,71 +10,100 @@ use Auth;
 
 class AdminController extends Controller
 {
-    public function index (){
+  public function index (){
 
-        return view ('admin/admin');
-    }
+      return view ('admin/admin');
+  }
 
-    public function santri(){
+  public function santri(){
 
-        return view ('admin/santri');
-    }
+      return view ('admin/santri');
+  }
 
-    public function adminsantri(){
+  public function adminsantri(){
 
-      return view ('admin/adminsantri');
-    }
+    return view ('admin/adminsantri');
+  }
 
-    public function login(){
+  public function login(){
 
-        return view ('admin/login');
-    }
+      return view ('admin/login');
+  }
 
-    public function store(Request $request) {
-        $password = $request->input('password');
-        $encryptPwd = Hash::make($password);
-        print($encryptPwd);die;
-    }
+  public function store(Request $request) {
+      $password = $request->input('password');
+      $encryptPwd = Hash::make($password);
+      print($encryptPwd);die;
+  }
 
-    public function auth(Request $request)
-    {
-      $response = array(
-          'status' => 500,
-          'status_desc'=> 'error',
-          'message' => '',
-          'is_valid' => false,
-          'data' =>'',
+  public function auth(Request $request)
+  {
+    $response = array(
+        'status' => 500,
+        'status_desc'=> 'error',
+        'message' => '',
+        'is_valid' => false,
+        'data' =>'',
 
-      );
+    );
 
-      try {
-        $email      = $request->input('email');
-        $password   = $request->input('password');
+    try {
+      $email      = $request->input('email');
+      $password   = $request->input('password');
 
-        $user = User::where('email','=',$email)->first();
+      $user = User::where('email','=',$email)->first();
 
-        if(Auth::guard('web')->attempt(['email' => $email, 'password' => $password])) {
-            $response['status'] = 200;
-            $response['status_desc'] = 'success';
-            $response['is_valid'] = true;
-            $response['data'] = $user;
-            unset($response['message']);
-        }else{
-          $response['status'] = 401;
-          $response['status_desc'] = 'Bad request';
-          $response['is_valid'] = false;
-          unset($response['data']);
-          unset($response['message']);          
-        }    
-
-      } catch (\Exception $e) {
-        $response['status'] = 500;
-        $response['message'] = $e->getMessage();
+      if(Auth::attempt(['email' => $email, 'password' => $password])) {
+          $request->session()->regenerate();
+          $response['status'] = 200;
+          $response['status_desc'] = 'success';
+          $response['is_valid'] = true;
+          $response['data'] = Auth::user();
+          unset($response['message']);
+      }else{
+        $response['status'] = 401;
+        $response['status_desc'] = 'Bad request';
+        $response['is_valid'] = false;
         unset($response['data']);
-      }
+        unset($response['message']);          
+      }    
 
-        return response()->json($response);               
+    } catch (\Exception $e) {
+      $response['status'] = 500;
+      $response['message'] = $e->getMessage();
+      unset($response['data']);
     }
+
+      return response()->json($response);               
+  }
+
+  public function logout(Request $request)
+  {
+    $response = array(
+        'status' => 500,
+        'status_desc'=> 'error',
+        'message' => '',
+        'is_valid' => false,
+
+    );
+
+    try{
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        $response['status'] = 200;
+        $response['status_desc'] = 'success';
+        $response['is_valid'] = true;
+        unset($response['message']);
+        Auth::logout();
+    }catch(Throwable $e) {
+      $response['status'] = 500;
+      $response['message'] = $e->getMessage();
+      unset($response['data']);
+    }
+
+    return response()->json($response); 
+  }
+
   function ajax_list()
   {
     $list = User::all();

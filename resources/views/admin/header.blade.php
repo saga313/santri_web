@@ -29,11 +29,34 @@
           </form>
         </div>
       </li>
-
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" class="dropdown-toggle" data-toggle="dropdown" class="nav-link" role="button" aria-expanded="true">
+          <i class="fas fa-user"></i>  
+        </a>
+        <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <center>
+          <div class="dropdown-item">
+            <img src="{{ asset ('img/user2-160x160.jpg') }}" class="media" alt="User Image">
+            <br>
+            <h3 class="dropdown-item-title">
+              @if (Auth::user())
+              {{ Auth::user()->name }}
+              @endif
+               - Web Developer
+              <p class="text-sm text-muted">Member since Nov. 2012</p>
+            </h3>
+          </div>
+        </center>
+          <div class="dropdown-item dropdown-footer">
+            <!-- <a href="#" class="btn btn-default btn-flat pull-left">Profile</a> -->
+            <a href="#" onclick="logout()" class="btn btn-default btn-flat pull-right">Sign out</a>
+          </div>
+        </ul>
       </li>
     </ul>
   </nav>

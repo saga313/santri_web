@@ -22,6 +22,7 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/admin/login', [AdminController::class, 'login'])->name('admin-login');
 Route::post('/admin/register', [AdminController::class, 'store'])->name('admin-register');
 Route::post('/admin/login/auth', [AdminController::class, 'auth'])->name('admin-auth');
+Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin-logout');
 Route::get('/admin/santri', [AdminController::class, 'santri'])->name('admin-santri');
 Route::get('/admin/adminsantri', [AdminController::class, 'adminsantri'])->name('admin-adminsantri');
 Route::post('/santri/ajax_list', [SantriController::class, 'ajax_list'])->name('santri-ajax-list');

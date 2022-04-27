@@ -13,7 +13,13 @@
           <img src="{{ asset ('img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a id="name" href="#" class="d-block"></a>
+          <a id="name" href="#" class="d-block">
+            @if (Auth::user())
+            {{ Auth::user()->name }}
+            @else
+            <script>window.location = "/admin/login";</script>
+            @endif
+          </a>
         </div>
       </div>
 
@@ -63,3 +69,4 @@
     </div>
     <!-- /.sidebar -->
   </aside>
+  
