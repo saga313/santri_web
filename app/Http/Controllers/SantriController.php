@@ -51,4 +51,10 @@ class SantriController extends Controller
       $countFiltered = Santri::all()->count();
       return $countFiltered;      
   }
+
+  public function hitung()
+  {
+      $countAll = Santri::count();
+      return response(['data' => $countAll], 200);
+  }
 }

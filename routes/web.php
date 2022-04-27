@@ -26,6 +26,7 @@ Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin-log
 Route::get('/admin/santri', [AdminController::class, 'santri'])->name('admin-santri');
 Route::get('/admin/adminsantri', [AdminController::class, 'adminsantri'])->name('admin-adminsantri');
 Route::post('/santri/ajax_list', [SantriController::class, 'ajax_list'])->name('santri-ajax-list');
+Route::get('/santri/hitung_santri', [SantriController::class, 'hitung'])->name('santri-hitung');
 Route::post('/admin/ajax_list', [AdminController::class, 'ajax_list'])->name('admin-ajax-list');
 Route::get('/santri-registration', [SantriRegistrationController::class, 'index'])->name('santri-registration');
 Route::post('/santri-registration/store', [SantriRegistrationController::class, 'store'])->name('santri-registration-store');
