@@ -309,7 +309,7 @@
         </div>
 
         <div class="mt-md-5 mt-4 text-more text-center">
-            <a href="blog.html">View All Posts <span class="pl-2 fa fa-long-arrow-right"></span></a>
+            <a href="https://api2.enscape3d.com/v3/view/6013aa89-94e1-4075-adc5-fd58682fb8c6">View All Posts <span class="pl-2 fa fa-long-arrow-right"></span></a>
         </div>
     </div>
 </div>
