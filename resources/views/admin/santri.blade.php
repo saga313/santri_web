@@ -45,6 +45,7 @@
 <script>
   $(function () {
     //datatables
+    const today = '{{ date("d-m-Y") }}';
     const table = $('#table').DataTable({
       "paging": true,
       dom: 'Bfrtip',
@@ -53,7 +54,7 @@
           extend:    'excelHtml5',
           text:      '<i class="fa fa-file-excel-o"></i>',
           titleAttr: 'Excel',
-          title: 'Data Santri'
+          title: 'Data Santri ' + today
         },
         ],
       "lengthChange": false,
