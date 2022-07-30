@@ -2,6 +2,8 @@
 @section('content')
 <!-- Theme style -->
 <link rel="stylesheet" href="{{ asset ('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset ('plugins/datatables/buttons.dataTables.min.css') }}">
+<link rel="stylesheet" href="{{ asset ('fonts/font-awesome.min.css') }}">
 
 <div class="row">
   <div class="col-12">
@@ -37,11 +39,23 @@
 
 <script src="{{ asset ('plugins/datatables/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset ('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset ('plugins/datatables/dataTables.buttons.min.js') }}"></script>
+<script src="{{ asset ('plugins/datatables/buttons.html5.min.js') }}"></script>
+<script src="{{ asset ('plugins/datatables/jszip.min.js') }}"></script>
 <script>
   $(function () {
     //datatables
     const table = $('#table').DataTable({
       "paging": true,
+      dom: 'Bfrtip',
+      buttons: [
+        {
+          extend:    'excelHtml5',
+          text:      '<i class="fa fa-file-excel-o"></i>',
+          titleAttr: 'Excel',
+          title: 'Data Santri'
+        },
+        ],
       "lengthChange": false,
       "searching": false,
       "ordering": true,
