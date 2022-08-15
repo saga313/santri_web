@@ -18,15 +18,23 @@ use App\Http\Controllers\SantriRegistrationController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+//Session Admin
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/admin/login', [AdminController::class, 'login'])->name('admin-login');
 Route::post('/admin/register', [AdminController::class, 'store'])->name('admin-register');
 Route::post('/admin/login/auth', [AdminController::class, 'auth'])->name('admin-auth');
 Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin-logout');
+//Modul Admin
+Route::post('/admin/ajax_list', [AdminController::class, 'ajax_list'])->name('admin-ajax-list');
 Route::get('/admin/santri', [AdminController::class, 'santri'])->name('admin-santri');
 Route::get('/admin/adminsantri', [AdminController::class, 'adminsantri'])->name('admin-adminsantri');
+//Modul Santri
 Route::post('/santri/ajax_list', [SantriController::class, 'ajax_list'])->name('santri-ajax-list');
+Route::post('/santri/ajax_add', [SantriController::class, 'ajax_add'])->name('santri-ajax-add');
+Route::post('/santri/ajax_update', [SantriController::class, 'ajax_update'])->name('santri-ajax-update');
+Route::get('/santri/ajax_edit/{id}', [SantriController::class, 'ajax_edit'])->name('santri-ajax-edit');
+Route::get('/santri/ajax_delete/{id}', [SantriController::class, 'ajax_delete'])->name('santri-ajax-delete');
 Route::get('/santri/hitung_santri', [SantriController::class, 'hitung'])->name('santri-hitung');
-Route::post('/admin/ajax_list', [AdminController::class, 'ajax_list'])->name('admin-ajax-list');
+//Registrasi Santri
 Route::get('/santri-registration', [SantriRegistrationController::class, 'index'])->name('santri-registration');
 Route::post('/santri-registration/store', [SantriRegistrationController::class, 'store'])->name('santri-registration-store');
