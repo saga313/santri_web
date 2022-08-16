@@ -108,7 +108,7 @@
 				},	
 				success:function(response) {
 					if (response.status === 200){
-							Swal.fire({
+				    Swal.fire({
 							icon: response.status_desc,
 							title: "Sukses",
 							text: 'Pendaftaran berhasil',
