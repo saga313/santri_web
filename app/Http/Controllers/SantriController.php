@@ -48,7 +48,7 @@ class SantriController extends Controller
     return response()->json($response, $response['status']);
   }
 
-  function ajax_update()
+  function ajax_update(Request $request)
   {
     $response = array(
         'status' => 500,
