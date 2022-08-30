@@ -56,7 +56,7 @@
           </div>-->
           <!-- /.col -->
           <div class="col-4">
-            <button type="button" onclick="login()" class="btn btn-primary btn-block">Sign In</button>
+            <button type="button" id="btnLogin" onclick="login()" class="btn btn-primary btn-block">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
@@ -74,6 +74,21 @@
 <script src="{{ asset ('js/adminlte.min.js') }}"></script>
 <script src="{{ asset ('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 <script type="text/javascript">
+
+  // Get the input field
+  var input = document.getElementById("password");
+
+  // Execute a function when the user presses a key on the keyboard
+  input.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("btnLogin").click();
+    }
+  });
+
   function login()
     {
       const email = $("#email").val();
