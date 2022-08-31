@@ -4,7 +4,6 @@
 <link rel="stylesheet" href="{{ asset ('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
 <link rel="stylesheet" href="{{ asset ('plugins/datatables/buttons.dataTables.min.css') }}">
 <link rel="stylesheet" href="{{ asset ('fonts/font-awesome.min.css') }}">
-<link rel="stylesheet" href="{{ asset ('plugins/jquery-datetimepicker/css/jquery.datetimepicker.css') }}">
 <link rel="stylesheet" href="{{ asset ('plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') }}">
 
 <div class="row">
@@ -144,7 +143,6 @@
 <script src="{{ asset ('plugins/datatables/buttons.html5.min.js') }}"></script>
 <script src="{{ asset ('plugins/datatables/jszip.min.js') }}"></script>
 <script src="{{ asset ('plugins/moment/moment.min.js') }}"></script>
-<script src="{{ asset ('plugins/jquery-datetimepicker/js/jquery.datetimepicker.full.min.js') }}"></script>
 <script src="{{ asset ('plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
 <script>
   let save_method;//for save method string
