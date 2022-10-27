@@ -59,7 +59,7 @@
 						</div>
 						<div class="cont-right">
 							<h6>Telepon </h6>
-							<p>085319285925</a></p>
+							<p>0882-9224-2947</a></p>
 						</div>
 					</div>
 					<div class="cont-top margin-up">

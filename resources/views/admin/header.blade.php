@@ -41,14 +41,13 @@
         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         <center>
           <div class="dropdown-item">
-            <img src="{{ asset ('img/user2-160x160.jpg') }}" class="media" alt="User Image">
             <br>
             <h3 class="dropdown-item-title">
               @if (Auth::user())
               {{ Auth::user()->name }}
               @endif
-               - Web Developer
-              <p class="text-sm text-muted">Member since Nov. 2012</p>
+               - Admin
+              <p class="text-sm text-muted">PonPes AL-HUSEN</p>
             </h3>
           </div>
         </center>
