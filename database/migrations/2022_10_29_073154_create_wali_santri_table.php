@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWaliSantrisTable extends Migration
+class CreateWaliSantriTable extends Migration
 {
   /**
    * Run the migrations.
@@ -13,7 +13,7 @@ class CreateWaliSantrisTable extends Migration
    */
   public function up()
   {
-    Schema::create('wali_santris', function (Blueprint $table) {
+    Schema::create('wali_santri', function (Blueprint $table) {
       $table->id();
       $table->bigInteger('santri_id');      
       $table->string('nama_wali');
@@ -30,6 +30,6 @@ class CreateWaliSantrisTable extends Migration
    */
   public function down()
   {
-    Schema::dropIfExists('wali_santris');
+    Schema::dropIfExists('wali_santri');
   }
 }
