@@ -7,7 +7,6 @@
 			 border-style: none;
 			 padding: 0 18px;
 			 border-radius: 22px;
-			 background-image: url('https://s17.postimg.cc/kc1y6xwlb/download.png');
 			 background-repeat: no-repeat;
 			 background-position: 2px;
 			 background-position-x: right;
@@ -91,8 +90,7 @@
 							<input type="email" class="form-control" name="email" id="w3lSender" placeholder="Email"
 								required="">
 						</div>       
-						<textarea class="form-control" name="alamat" id="w3lMessage" placeholder="Alamat"
-							required="">
+						<textarea class="form-control" name="alamat" id="w3lAlamat" placeholder="Alamat" required="">
 						</textarea>
 						<button type="button" class="btn btn-primary btn-style mt-4" onclick="save()">Kirim</button>
 					</form>

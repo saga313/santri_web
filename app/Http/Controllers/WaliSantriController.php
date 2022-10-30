@@ -8,6 +8,120 @@ use App\Models\Santri;
 
 class WaliSantriController extends Controller
 {
+
+  function ajax_add(Request $request)
+  {
+    $response = array(
+        'status' => 500,
+        'status_desc'=> 'error',
+        'message' => '',
+        'data' => '',
+
+    );
+    try {
+        $santri = new WaliSantri;
+        $santri->santri_id = $request->santri_id;
+        $santri->nama_wali = $request->nama_wali;
+        $santri->handphone = $request->handphone;
+        $santri->alamat = $request->alamat;
+
+        if ($santri->save()){
+            $response['status'] = 200;
+            $response['status_desc'] = 'success';
+            $response['data'] = $santri;
+        }
+
+    } catch (\Exception $e) {
+        $response['status'] = 400;
+        $response['message'] = $e->getMessage();
+        unset($response['data']);
+    }
+
+    return response()->json($response, $response['status']);
+  }
+
+  function ajax_edit($id)
+  {
+    $santri = WaliSantri::find($id);
+    return response()->json($santri);
+  }
+
+  function ajax_update(Request $request)
+  {
+    $response = array(
+        'status' => 500,
+        'status_desc'=> 'error',
+        'message' => '',
+        'data' => '',
+
+    );
+    try {
+
+        $santri = WaliSantri::find($request->id);
+
+        if($santri === null){
+          $response['message'] = 'ID tidak ditemukan';
+          unset($response['data']);
+          return response()->json($response, $response['status']);
+        }
+         
+        $santri->id = $request->id;
+        $santri->santri_id = $request->santri_id;
+        $santri->nama_wali = $request->nama_wali;
+        $santri->handphone = $request->handphone;
+        $santri->alamat = $request->alamat;
+
+        if ($santri->save()){
+            $response['status'] = 200;
+            $response['status_desc'] = 'success';
+            $response['data'] = $santri;
+            unset($response['message']);
+        }
+
+    } catch (\Exception $e) {
+        $response['status'] = 400;
+        $response['message'] = $e->getMessage();
+        unset($response['data']);
+    }
+
+    return response()->json($response, $response['status']);
+  }
+
+  function ajax_delete($id)
+  {
+    $response = array(
+        'status' => 500,
+        'status_desc'=> 'error',
+        'message' => '',
+        'data' => '',
+
+    );
+    try {
+
+        $santri = WaliSantri::find($id);
+
+        if($santri === null){
+          $response['message'] = 'ID tidak ditemukan';
+          unset($response['data']);
+          return response()->json($response, $response['status']);
+        }
+
+        if ($santri->delete()){
+            $response['status'] = 200;
+            $response['status_desc'] = 'success';
+            $response['data'] = $santri;
+            unset($response['message']);
+        }
+
+    } catch (\Exception $e) {
+        $response['status'] = 400;
+        $response['message'] = $e->getMessage();
+        unset($response['data']);
+    }
+
+    return response()->json($response, $response['status']);
+  }
+
 	function ajax_list()
   {
     $list = WaliSantri::select(
@@ -21,11 +135,10 @@ class WaliSantriController extends Controller
     foreach ($list as $item) {
         $no++;
         $row = array();
-        $row[] = $item->id;
+        $row[] = $item->santri_id;
         $row[] = $item->nama_santri;
         $row[] = $item->nama_wali;
         $row[] = $item->handphone;
-        $row[] = $item->email;
         $row[] = $item->alamat;
         
         $row[] = '<a class="btn btn-outline-primary btn-sm" href="javascript:void(0)" title="Edit" onclick="edit('."'".$item->id."'".')"><i class="glyphicon glyphicon-pencil"></i> Edit</a>        

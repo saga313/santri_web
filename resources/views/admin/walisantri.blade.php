@@ -55,7 +55,7 @@
                 <label class="control-label col-md-3">ID Santri</label>
                 <div class="col-md-8">
                 <input type="hidden" name="id" id="id" >
-                <input type="text" name="nama_santri" id="nama_santri" class="form-control">
+                <input type="text" name="santri_id" id="santri_id" class="form-control">
                     <span class="help-block"></span>
                 </div>
               </div>
@@ -105,7 +105,7 @@
   let save_method;//for save method string
   let table;
   //santri select
-  $( "#nama_santri" ).autocomplete({
+  $( "#santri_id" ).autocomplete({
     source: function( request, response ) {
       // Fetch data
       $.ajax({
@@ -123,7 +123,7 @@
     }       
   });
 
-  $( "#nama_santri" ).autocomplete( "option", "appendTo", "#form" );
+  $( "#santri_id" ).autocomplete( "option", "appendTo", "#form" );
 
   $(function () {
     //datatables
@@ -137,9 +137,9 @@
           text:      '<i class="fa fa-file-excel-o"></i>',
           titleAttr: 'Excel',
           exportOptions: {
-            columns: [0, 1, 2, 3, 4, 5, 6] // the first column has an index of 0
+            columns: [0, 1, 2, 3, 4] // the first column has an index of 0
           },
-          title: 'Data Santri ' + today
+          title: 'Data Wali Santri ' + today
         },
         ],
       "lengthChange": false,
@@ -188,10 +188,10 @@ function add()
   $('#modal_form').modal('show'); // show bootstrap modal
   $('.modal-title').text('Add Data'); // Set Title to Bootstrap modal title
 } 
-/*
+
 function edit(id)
 {
-  let url = "{{route('santri-ajax-edit', ':id')}}";
+  let url = "{{route('wali-santri-ajax-edit', ':id')}}";
   url = url.replace(':id', id);
   save_method = 'update';
   $('#form')[0].reset(); // reset form on modals
@@ -206,16 +206,9 @@ function edit(id)
     success: function(data)
     {
       $('[name="id"]').val(data.id);
-      $('[name="nama"]').val(data.nama);
-      if (data.jk === 'L') {
-        $("#jkl").prop("checked", true);
-      }else if(data.jk === 'P') {
-        $("#jkp").prop("checked", true);
-      }      
-      $('[name="tempat"]').val(data.tempat);
-      $('[name="tgllahir"]').val(data.tgllahir);
+      $('[name="santri_id"]').val(data.santri_id);   
+      $('[name="nama_wali"]').val(data.nama_wali);
       $('[name="handphone"]').val(data.handphone);
-      $('[name="email"]').val(data.email);
       $('[name="alamat"]').val(data.alamat);
       $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
       $('.modal-title').text('Edit Data'); // Set title to Bootstrap modal title
@@ -240,9 +233,9 @@ function save()
     let url;
 
     if(save_method == 'add') {
-        url = "{{ route('santri-ajax-add')}}";
+        url = "{{ route('wali-santri-ajax-add')}}";
     } else {
-        url = "{{ route('santri-ajax-update')}}";
+        url = "{{ route('wali-santri-ajax-update')}}";
     }
 
     // ajax adding data to database
@@ -285,7 +278,7 @@ function save()
 
 function delete_by_id(id)
 {
-    let url = "{{route('santri-ajax-delete', ':id')}}";
+    let url = "{{route('wali-santri-ajax-delete', ':id')}}";
     url = url.replace(':id', id);
     if(confirm('Are you sure delete this data?'))
     {
@@ -324,7 +317,7 @@ function delete_by_id(id)
 
     }
 }
-*/
+
 </script>
 
 @endsection

@@ -33,6 +33,10 @@ Route::get('/admin/adminsantri', [AdminController::class, 'adminsantri'])->name(
 //Modul Wali Santri
 Route::post('/wali/santri/ajax_list', [WaliSantriController::class, 'ajax_list'])->name('wali-santri-ajax-list');
 Route::post('/wali/santri/santri_select', [WaliSantriController::class, 'santri_select'])->name('santri-select');
+Route::post('/wali/santri/ajax_add', [WaliSantriController::class, 'ajax_add'])->name('wali-santri-ajax-add');
+Route::post('/wali/santri/ajax_update', [WaliSantriController::class, 'ajax_update'])->name('wali-santri-ajax-update');
+Route::get('/wali/santri/ajax_edit/{id}', [WaliSantriController::class, 'ajax_edit'])->name('wali-santri-ajax-edit');
+Route::get('/wali/ajax_delete/{id}', [WaliSantriController::class, 'ajax_delete'])->name('wali-santri-ajax-delete');
 //Modul Santri
 Route::post('/santri/ajax_list', [SantriController::class, 'ajax_list'])->name('santri-ajax-list');
 Route::post('/santri/ajax_add', [SantriController::class, 'ajax_add'])->name('santri-ajax-add');
