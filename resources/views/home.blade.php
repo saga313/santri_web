@@ -94,45 +94,28 @@
                                 <img class="card-img-bottom d-block" src="{{ asset ('img/b2.jpeg') }}"
                                     alt="Card image cap">
                             </a>
-                            <div class="post-pos">
-                                <a href="#reciepe" class="receipe blue">Beginner</a>
-                            </div>
+                            
                         </div>
                         <div class="card-body course-details">
                             <div class="price-review d-flex justify-content-between mb-1align-items-center">
-                                <p>$35.00</p>
-                                <ul class="rating-star">
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star-o"></span></li>
-                                </ul>
+                                
                             </div>
-                            <a href="#course-single" class="course-desc">Open Programming Courses for everyone : Python
+                            <a href="#course-single" class="course-desc">Acara Perlombaan Bulan Muharram Santri Putri
                             </a>
                             <div class="course-meta mt-4">
                                 <div class="meta-item course-lesson">
                                     <span class="fa fa-clock-o"></span>
-                                    <span class="meta-value"> 20 hrs </span>
+                                    <span class="meta-value"> 4 hrs </span>
                                 </div>
                                 <div class="meta-item course-">
                                     <span class="fa fa-user-o"></span>
-                                    <span class="meta-value"> 50 </span>
+                                    <span class="meta-value"> 36 </span>
                                 </div>
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="author align-items-center">
-                                <img src="{{ asset ('img/a1.jpg') }}" alt="" class="img-fluid rounded-circle">
-                                <ul class="blog-meta">
-                                    <li>
-                                        <span class="meta-value mx-1">by</span> <a href="#author"> Olivia</a>
-                                    </li>
-                                    <li>
-                                        <span class="meta-value mx-1">in</span> <a href="#author"> Programing</a>
-                                    </li>
-                                </ul>
+                               
                             </div>
                         </div>
                     </div>
@@ -145,46 +128,27 @@
                                 <img class="card-img-bottom d-block" src="{{ asset ('img/b3.jpeg') }}"
                                     alt="Card image cap">
                             </a>
-                            <div class="course-price-badge"> Free</div>
-                            <div class="post-pos">
-                                <a href="#reciepe" class="receipe blue">Beginner</a>
-                            </div>
+                            
                         </div>
                         <div class="card-body course-details">
                             <div class="price-review d-flex justify-content-between mb-1align-items-center">
-                                <p>$0.00</p>
-                                <ul class="rating-star">
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star-o"></span></li>
-                                </ul>
+                                
                             </div>
-                            <a href="#course-single" class="course-desc">Learning to Write as a clean and Professional
-                                Author</a>
+                            <a href="#course-single" class="course-desc">Ziarah & Studi Banding Pondok</a>
                             <div class="course-meta mt-4">
                                 <div class="meta-item course-lesson">
                                     <span class="fa fa-clock-o"></span>
-                                    <span class="meta-value"> 20 hrs </span>
+                                    <span class="meta-value"> 12 hrs </span>
                                 </div>
                                 <div class="meta-item course-">
                                     <span class="fa fa-user-o"></span>
-                                    <span class="meta-value"> 50 </span>
+                                    <span class="meta-value"> 19 </span>
                                 </div>
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="author align-items-center">
-                                <img src="{{ asset ('img/b3.jpeg') }}" alt="" class="img-fluid rounded-circle">
-                                <ul class="blog-meta">
-                                    <li>
-                                        <span class="meta-value mx-1">by</span> <a href="#author"> Isabella</a>
-                                    </li>
-                                    <li>
-                                        <span class="meta-value mx-1">in</span> <a href="#author"> Teaching</a>
-                                    </li>
-                                </ul>
+                                
                             </div>
                         </div>
                     </div>
@@ -200,39 +164,23 @@
                             <div class="course-price-badge-new"> New</div>
                         </div>
                         <div class="card-body course-details">
-                            <div class="price-review d-flex justify-content-between mb-1align-items-center">
-                                <p>$49.00</p>
-                                <ul class="rating-star">
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star"></span></li>
-                                    <li><span class="fa fa-star-o"></span></li>
-                                </ul>
+                            
                             </div>
-                            <a href="#course-single" class="course-desc">Learn Master JQuery in a Short Period of Time</a>
+                            <a href="#course-single" class="course-desc">Acara Perlombaan Bulan Muharram Santri Putra</a>
                             <div class="course-meta mt-4">
                                 <div class="meta-item course-lesson">
                                     <span class="fa fa-clock-o"></span>
-                                    <span class="meta-value"> 20 hrs </span>
+                                    <span class="meta-value"> 4 hrs </span>
                                 </div>
                                 <div class="meta-item course-">
                                     <span class="fa fa-user-o"></span>
-                                    <span class="meta-value"> 50 </span>
+                                    <span class="meta-value"> 39 </span>
                                 </div>
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="author align-items-center">
-                                <img src="{{ asset ('img/a4.jpg') }}" alt="" class="img-fluid rounded-circle">
-                                <ul class="blog-meta">
-                                    <li>
-                                        <span class="meta-value mx-1">by</span> <a href="#author"> William</a>
-                                    </li>
-                                    <li>
-                                        <span class="meta-value mx-1">in</span> <a href="#author"> Programing</a>
-                                    </li>
-                                </ul>
+                                
                             </div>
                         </div>
                     </div>
@@ -309,7 +257,7 @@
         </div>
 
         <div class="mt-md-5 mt-4 text-more text-center">
-            <a href="blog.html">View All Posts <span class="pl-2 fa fa-long-arrow-right"></span></a>
+            <a href="https://api2.enscape3d.com/v3/view/6013aa89-94e1-4075-adc5-fd58682fb8c6">View Drone <span class="pl-2 fa fa-long-arrow-right"></span></a>
         </div>
     </div>
 </div>
@@ -320,7 +268,7 @@
             <h5 class="title-small mb-1">Start learning religion</h5>
             <h3 class="title-big">Ayok Mondok !!</h3>
             <a href="{{ route('santri-registration') }}" class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2">Daftar Sekarang</a>
-            <a href="contact.html" class="btn btn-style btn-primary mt-sm-5 mt-4">Hubungi Kami</a>
+            <a href="#contact" class="btn btn-style btn-primary mt-sm-5 mt-4">Hubungi Kami</a>
         </div>
     </div>
 </div>
@@ -330,16 +278,10 @@
         <div class="container">
             <div class="row main-cont-wthree-2">
                 <div class="col-lg-5 feature-grid-left">
-                    <h5 class="title-small mb-1">Experienced professionals</h5>
-                    <h3 class="title-big mb-4">Meet our teachers</h3>
-                    <p class="text-para">Curabitur id gravida risus. Fusce eget ex fermentum, ultricies nisi ac sed,
-                        lacinia est.
-                        Quisque ut lectus consequat, venenatis eros et, commodo risus. Nullam sit amet laoreet elit.
-                        Suspendisse non magna a velit efficitur. </p>
-                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas ab qui impedit,
-                        libero illo
-                        quia sequi quibusdam iure. Error minus quod reprehenderit quae dolor velit soluta animi
-                        voluptate dicta enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, provident!
+                    <h5 class="title-small mb-1">Pondok Pesantren</h5>
+                    <h3 class="title-big mb-4">AL - HUSEN</h3>
+                    <p class="text-para">Menyelenggarakan pendidikan berbasis ajaran Ulama Salafus Shalih Ahlussunnah Wal Jama'ah An-Nahdliyyah yang menjaga tradisi lama yang baik dan mengambil tradisi baru yang lebih baik tanpa meninggalkan warisan dan metode pendidikan ulama terdahulu yang mu'tabaroh. </p>
+                    <p class="mt-3">
                     </p>
                     <a href="{{ route('santri-registration') }}" class="btn btn-primary btn-style mt-md-5 mt-4">Daftar Sekarang</a>
                 </div>
@@ -381,7 +323,7 @@
                         </div>
                         <div class="col-sm-6 mt-lg-4 mt-3">
                             <div class="box16">
-                                <a href="#url"><img src="{{ asset ('img/t4.jpeg') }}" alt="" class="img-fluid radius-image" /></a>
+                                <a href="#url"><img src="{{ asset ('img/t4.jpg') }}" alt="" class="img-fluid radius-image" /></a>
                                 <div class="box-content">
                                     <h3 class="title"><a href="#url">Ahmad Fauzani</a></h3>
                                     <span class="post">Pengurus</a></span>
@@ -536,10 +478,9 @@ Tak ada lagi kata yang bisa saya ucap, kalian adalah yang terbaik!</q>
                         <div class="testimonial-content">
                             <div class="testimonial">
                                 <blockquote>
-                                    <q>Lorem ipsum dolor sit amet elit. Velit beatae
-                                        laudantium
-                                        voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
-                                        Dolores molestias adipisci dolo amet!.</q>
+                                    <q>Kesan saya mesantren di alhusen sangat merasa bhgia krna akang telah memupuk jiwa rohani saya menjdi lebih baik, entah apa yg trjadi jika saat itu saya tidak mesantren. Ditambah keadaan akhir zaman yg sungguh2 banyak fitnah.
+
+Pesan : bagi seluruh alumni tetep jaga silaturahmi. Untuk para santri mukimin smngatlah mnuntut ilmu sebelum datang nya 5 perkara.</q>
                                 </blockquote>
                                 <div class="testi-des">
                                     <div class="test-img"><img src="{{ asset ('img/avatar3.png') }}" class="img-fluid"

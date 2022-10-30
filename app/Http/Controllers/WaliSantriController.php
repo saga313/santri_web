@@ -3,15 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\WaliSantri;
 use App\Models\Santri;
 
-class SantriController extends Controller
+class WaliSantriController extends Controller
 {
-  function ajax_edit($id)
-  {
-    $santri = Santri::find($id);
-    return response()->json($santri);
-  }
 
   function ajax_add(Request $request)
   {
@@ -23,14 +19,10 @@ class SantriController extends Controller
 
     );
     try {
-        $santri = new Santri;
-        $santri->id = random_int(100000, 999999);
-        $santri->nama = $request->nama;
-        $santri->jk = $request->jk;
-        $santri->tempat = $request->tempat;
-        $santri->tgllahir = $request->tgllahir;
+        $santri = new WaliSantri;
+        $santri->santri_id = $request->santri_id;
+        $santri->nama_wali = $request->nama_wali;
         $santri->handphone = $request->handphone;
-        $santri->email = $request->email;
         $santri->alamat = $request->alamat;
 
         if ($santri->save()){
@@ -48,6 +40,12 @@ class SantriController extends Controller
     return response()->json($response, $response['status']);
   }
 
+  function ajax_edit($id)
+  {
+    $santri = WaliSantri::find($id);
+    return response()->json($santri);
+  }
+
   function ajax_update(Request $request)
   {
     $response = array(
@@ -59,7 +57,7 @@ class SantriController extends Controller
     );
     try {
 
-        $santri = Santri::find($request->id);
+        $santri = WaliSantri::find($request->id);
 
         if($santri === null){
           $response['message'] = 'ID tidak ditemukan';
@@ -68,12 +66,9 @@ class SantriController extends Controller
         }
          
         $santri->id = $request->id;
-        $santri->nama = $request->nama;
-        $santri->jk = $request->jk;
-        $santri->tempat = $request->tempat;
-        $santri->tgllahir = $request->tgllahir;
+        $santri->santri_id = $request->santri_id;
+        $santri->nama_wali = $request->nama_wali;
         $santri->handphone = $request->handphone;
-        $santri->email = $request->email;
         $santri->alamat = $request->alamat;
 
         if ($santri->save()){
@@ -103,7 +98,7 @@ class SantriController extends Controller
     );
     try {
 
-        $santri = Santri::find($id);
+        $santri = WaliSantri::find($id);
 
         if($santri === null){
           $response['message'] = 'ID tidak ditemukan';
@@ -127,26 +122,23 @@ class SantriController extends Controller
     return response()->json($response, $response['status']);
   }
 
-  function ajax_list()
+	function ajax_list()
   {
-    $list = Santri::all();
+    $list = WaliSantri::select(
+            "wali_santri.*", 
+            "santri.nama as nama_santri")
+    				->leftJoin("santri", "santri.id", "=", "wali_santri.santri_id")
+          	->get();
     $data = array();
     $no = $_POST['start'];
     // $no = 1;
     foreach ($list as $item) {
         $no++;
         $row = array();
-        $row[] = $item->id;
-        $row[] = $item->nama;
-        if($item->jk === 'L'){
-          $item->jk = 'Laki-laki';
-        }elseif($item->jk === 'P'){
-          $item->jk = 'Perempuan';
-        }
-        $row[] = $item->jk;
-        $row[] = $item->tempat.','.$item->tgllahir;
+        $row[] = $item->santri_id;
+        $row[] = $item->nama_santri;
+        $row[] = $item->nama_wali;
         $row[] = $item->handphone;
-        $row[] = $item->email;
         $row[] = $item->alamat;
         
         $row[] = '<a class="btn btn-outline-primary btn-sm" href="javascript:void(0)" title="Edit" onclick="edit('."'".$item->id."'".')"><i class="glyphicon glyphicon-pencil"></i> Edit</a>        
@@ -168,19 +160,35 @@ class SantriController extends Controller
 
   function count_all()
   {
-      $countAll = Santri::count();
-      return $countAll;        
+      $countAll = WaliSantri::select(
+            "wali_santri.*", 
+            "santri.nama as nama_santri")
+    				->leftJoin("santri", "santri.id", "=", "wali_santri.santri_id")
+          	->count();
+      return $countAll;      
   }
 
   function count_filtered()
   {
-      $countFiltered = Santri::all()->count();
-      return $countFiltered;      
+      $countFiltered = WaliSantri::all()->count();
+      return $countFiltered;
   }
 
-  public function hitung()
+  function santri_select(Request $request)
   {
-      $countAll = Santri::count();
-      return response(['data' => $countAll], 200);
+    if ($request->has('term')) {
+      $key = $request->term;
+      $data = Santri::select('id', 'nama')->where('nama', 'LIKE', '%'.$key.'%')
+				->orWhere('id', 'LIKE', '%'.$key.'%')
+      	->get();
+
+      $response = array();
+      foreach($data as $d){
+         $response[] = array("value"=>$d->id,"label"=>$d->id." - ".$d->nama);
+      }
+
+      return response()->json($response);
+    }
   }
+
 }

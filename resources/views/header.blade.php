@@ -5,7 +5,7 @@
         <a class="navbar-brand" href="index.html">
             <img src="{{ asset ('img/a.png') }}" style="height:65px;" />
         </a>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ route('home') }}">
             AL-HUSEN <span class="logo"></span>
         </a>
       </h1>

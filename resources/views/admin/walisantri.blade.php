@@ -5,12 +5,13 @@
 <link rel="stylesheet" href="{{ asset ('plugins/datatables/buttons.dataTables.min.css') }}">
 <link rel="stylesheet" href="{{ asset ('fonts/font-awesome.min.css') }}">
 <link rel="stylesheet" href="{{ asset ('plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') }}">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 <div class="row">
   <div class="col-12">
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">Data Santri</h3><br />
+        <h3 class="card-title">Data Wali Santri</h3><br />
         <button type="button" id="btnAdd" onclick="add()" class="btn btn-outline-success btn-sm"title="Add" onclick="add()">Add</button>        
       </div>
       <!-- /.card-header -->
@@ -18,12 +19,10 @@
         <table id="table" class="table table-bordered table-hover">
           <thead>
           <tr>
-            <th>ID</th>
-            <th>Nama</th>
-            <th>Jenis Kelamin</th>
-            <th>Tanggal Lahir</th>
+            <th>ID Santri</th>
+            <th>Nama Santri</th>
+            <th>Nama Wali</th>
             <th>Handphone</th>
-            <th>Email</th>
             <th>Alamat</th>
             <th style="width:100px;"></th>
           </tr>
@@ -53,53 +52,17 @@
           <form action="#" id="form" class="form-horizontal">
             <div class="form-body">
              <div class="form-group">
-                <label class="control-label col-md-3">Nama</label>
+                <label class="control-label col-md-3">ID Santri</label>
                 <div class="col-md-8">
-                <input type="hidden" name="id" class="form-control" id="id" >
-                <input type="text" name="nama" class="form-control" id="nama" required="required">
+                <input type="hidden" name="id" id="id" >
+                <input type="text" name="santri_id" id="santri_id" class="form-control">
                     <span class="help-block"></span>
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-md-3">Jenis Kelamin</label>
-                <div class="col-md-8">
-                  <div class="row">
-                  <div class="col-sm-6">
-                  <div class="form-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" id="jkl" name="jk" value="L">
-                    <label class="form-check-label">Laki-laki</label>
-                  </div>
-                  </div>
-                  </div>
-                  <div class="col-sm-6">
-                  <div class="form-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" id="jkp" name="jk" value="P">
-                    <label class="form-check-label">Perempuan</label>
-                  </div>
-                  </div>
-                  </div>
-                  </div>                  
-                 
-                </div>
-              </div>
-              <div class="form-group">
-                  <label class="control-label col-md-3">Tempat Lahir</label>
+                  <label class="control-label col-md-3">Nama Wali</label>
                   <div class="col-md-8">
-                    <input type="text" name="tempat" class="form-control" id="tempat" required="required">
-                    <span class="help-block"></span>
-                  </div>
-              </div>              
-              <div class="form-group">
-                  <label class="control-label col-md-3">Tanggal Lahir</label>
-                  <div class="col-md-8">
-                    <div class="input-group date">
-                    <input type="text" id="tgllahir" name="tgllahir" class="form-control datetimepicker-input">
-                    <div class="input-group-append" data-target="#tgllahir">
-                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                    </div>
-                  </div>
+                    <input type="text" name="nama_wali" class="form-control" id="nama_wali" required="required">
                     <span class="help-block"></span>
                   </div>
               </div>
@@ -108,13 +71,6 @@
                   <div class="col-md-8">
                     <input type="text" name="handphone" class="form-control" id="handphone" required="required">
                     <span class="help-block"></span>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <label class="control-label col-md-3">Email</label>
-                  <div class="col-md-8">
-                      <input type="text" name="email" class="form-control" id="email" required="required">
-                      <span class="help-block"></span>
                   </div>
               </div>
               <div class="form-group">
@@ -144,18 +100,30 @@
 <script src="{{ asset ('plugins/datatables/jszip.min.js') }}"></script>
 <script src="{{ asset ('plugins/moment/moment.min.js') }}"></script>
 <script src="{{ asset ('plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
   let save_method;//for save method string
   let table;
-  //datepicker
-  $('#tgllahir').datepicker({
-    autoclose: true,
-    format: "dd-mm-yyyy",
-    todayHighlight: true,
-    orientation: "top auto",
-    todayBtn: true,
-    todayHighlight: true,  
-  });  
+  //santri select
+  $( "#santri_id" ).autocomplete({
+    source: function( request, response ) {
+      // Fetch data
+      $.ajax({
+        url:"{{ route('santri-select')}}",
+        type: 'post',
+        dataType: "json",
+        data: {
+           _token: "{{ csrf_token() }}",
+           term: request.term
+        },
+        success: function( data ) {
+           response( data );
+        }
+      });
+    }       
+  });
+
+  $( "#santri_id" ).autocomplete( "option", "appendTo", "#form" );
 
   $(function () {
     //datatables
@@ -169,9 +137,9 @@
           text:      '<i class="fa fa-file-excel-o"></i>',
           titleAttr: 'Excel',
           exportOptions: {
-            columns: [0, 1, 2, 3, 4, 5, 6] // the first column has an index of 0
+            columns: [0, 1, 2, 3, 4] // the first column has an index of 0
           },
-          title: 'Data Santri ' + today
+          title: 'Data Wali Santri ' + today
         },
         ],
       "lengthChange": false,
@@ -187,7 +155,7 @@
        // "bFilter": false,
       // Load data for the table's content from an Ajax source
       "ajax": {
-        "url": "{{ route('santri-ajax-list')}}",
+        "url": "{{ route('wali-santri-ajax-list')}}",
         "type": "POST",
         "dataType": "json",
         "data":{ _token: "{{csrf_token()}}"}
@@ -223,7 +191,7 @@ function add()
 
 function edit(id)
 {
-  let url = "{{route('santri-ajax-edit', ':id')}}";
+  let url = "{{route('wali-santri-ajax-edit', ':id')}}";
   url = url.replace(':id', id);
   save_method = 'update';
   $('#form')[0].reset(); // reset form on modals
@@ -238,16 +206,9 @@ function edit(id)
     success: function(data)
     {
       $('[name="id"]').val(data.id);
-      $('[name="nama"]').val(data.nama);
-      if (data.jk === 'L') {
-        $("#jkl").prop("checked", true);
-      }else if(data.jk === 'P') {
-        $("#jkp").prop("checked", true);
-      }      
-      $('[name="tempat"]').val(data.tempat);
-      $('[name="tgllahir"]').val(data.tgllahir);
+      $('[name="santri_id"]').val(data.santri_id);   
+      $('[name="nama_wali"]').val(data.nama_wali);
       $('[name="handphone"]').val(data.handphone);
-      $('[name="email"]').val(data.email);
       $('[name="alamat"]').val(data.alamat);
       $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
       $('.modal-title').text('Edit Data'); // Set title to Bootstrap modal title
@@ -272,9 +233,9 @@ function save()
     let url;
 
     if(save_method == 'add') {
-        url = "{{ route('santri-ajax-add')}}";
+        url = "{{ route('wali-santri-ajax-add')}}";
     } else {
-        url = "{{ route('santri-ajax-update')}}";
+        url = "{{ route('wali-santri-ajax-update')}}";
     }
 
     // ajax adding data to database
@@ -317,7 +278,7 @@ function save()
 
 function delete_by_id(id)
 {
-    let url = "{{route('santri-ajax-delete', ':id')}}";
+    let url = "{{route('wali-santri-ajax-delete', ':id')}}";
     url = url.replace(':id', id);
     if(confirm('Are you sure delete this data?'))
     {
