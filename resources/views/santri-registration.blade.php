@@ -7,7 +7,6 @@
 			 border-style: none;
 			 padding: 0 18px;
 			 border-radius: 22px;
-			 background-image: url('https://s17.postimg.cc/kc1y6xwlb/download.png');
 			 background-repeat: no-repeat;
 			 background-position: 2px;
 			 background-position-x: right;

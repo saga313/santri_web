@@ -20,6 +20,11 @@ class AdminController extends Controller
       return view ('admin/santri');
   }
 
+  public function wali_santri(){
+
+      return view ('admin/walisantri');
+  }
+
   public function adminsantri(){
 
     return view ('admin/adminsantri');
