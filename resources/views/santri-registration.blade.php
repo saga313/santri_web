@@ -91,10 +91,10 @@
 							<input type="email" class="form-control" name="email" id="w3lSender" placeholder="Email"
 								required="">
 						</div>       
-						<textarea class="form-control" name="alamat" id="w3lMessage" placeholder="Alamat"
+						<textarea class="form-control" name="alamat" id="w3lMessage" placeholder="alamat"
 							required="">
 						</textarea>
-						<button type="button" class="btn btn-primary btn-style mt-4" onclick="save()">Kirim</button>
+						<button type="button" class="btn btn-primary btn-style mt-4" onclick="save()">Daftar</button>
 					</form>
 				</div>
 			</div>
