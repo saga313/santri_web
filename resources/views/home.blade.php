@@ -257,7 +257,7 @@
         </div>
 
         <div class="mt-md-5 mt-4 text-more text-center">
-            <a href="https://api2.enscape3d.com/v3/view/6013aa89-94e1-4075-adc5-fd58682fb8c6">View Drone <span class="pl-2 fa fa-long-arrow-right"></span></a>
+            <a href="https://api2.enscape3d.com/v3/view/933ee71f-e501-4035-a797-b234f7685fcf">Drone View <span class="pl-2 fa fa-long-arrow-right"></span></a>
         </div>
     </div>
 </div>
